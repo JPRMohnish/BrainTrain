@@ -15,7 +15,7 @@ module.exports = {
     },
     topicId:
     {
-       type: Sequelize.STRING,
+       type: Sequelize.INTEGER,
        allowNull:false,
     },
      score:

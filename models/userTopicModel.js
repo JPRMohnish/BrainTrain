@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         topicId:
         {
-           type: DataTypes.STRING,
+           type: DataTypes.INTEGER,
            allowNull:false,
         },
          score:
