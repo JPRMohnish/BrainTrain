@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
            type: DataTypes.STRING,
            allowNull:false,
         },
-        score:
+         score:
         {
            type: DataTypes.INTEGER,
            defaultValue:0,
@@ -38,6 +38,16 @@ module.exports = (sequelize, DataTypes) => {
         {
             type: DataTypes.DATE,
             defaultValue: DataTypes.NOW
+        },
+        nextPracticeDate:
+        {
+          type: DataTypes.DATE,
+          defaultValue: DataTypes.NOW
+        },
+        attemptNo:
+        {
+           type: DataTypes.INTEGER,
+           defaultValue:0,
         },
         deletedAt:
         {

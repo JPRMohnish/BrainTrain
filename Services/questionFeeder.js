@@ -1,7 +1,7 @@
 const { sequelize, DataTypes } = require('../Services/mysqlConnection');
 const questionModel=require('../models/questionModel')(sequelize, DataTypes);
 const topicModel=require('../models/topicModel')(sequelize, DataTypes);
-questionModel.topicModel=questionModel.belongsTo(topicModel,{ foreignKey: 'topicId' ,});
+questionModel.topicModel=questionModel.belongsTo(topicModel,{ foreignKey: 'topicId' });
 topicModel.hasMany(questionModel);
 exports.addQuestion=async (question)=>
 {
@@ -11,8 +11,6 @@ console.log(title);
 t=await topicModel.findOne({ where: { title:title} });
 if(t==null)
 {
-    console.log("dd",t);
-    
     t=await topicModel.create({title:title});
    // console.log(p.topicId);return;
 }
@@ -27,4 +25,9 @@ const u = await questionModel.create({
     {
         console.log(e);
     }
+}
+exports.getTopQuestion=(userId)=>{
+// get top 5 topics
+//get 2 questions from each topic
+
 }

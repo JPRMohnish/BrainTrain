@@ -39,11 +39,22 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             defaultValue: DataTypes.NOW
         },
+        nextPracticeDate:
+        {
+          type: DataTypes.DATE,
+          defaultValue: DataTypes.NOW
+        },
+        attemptNo:
+        {
+           type: DataTypes.INTEGER,
+           defaultValue:0,
+        },
         deletedAt:
         {
             type: DataTypes.DATE,
             allowNull: true,
         },
+
     }, {
         sequelize,
         modelName: 'userQuestion',
