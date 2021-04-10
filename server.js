@@ -1,4 +1,5 @@
 const express=require('express');
+const bodyParser = require('body-parser');   
 const app=express();
 const sequelize=require('./Services/mysqlConnection').sequelize;
 port=3000;
@@ -22,3 +23,11 @@ app.listen(3000,()=>{
 });
 }
 main();
+app.get ('/',(req , res) => {
+	console.log("Hello");
+	res.send("Hello");
+});
+
+app.use('/text',require('./routes/wikicontent'));
+
+
