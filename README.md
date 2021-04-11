@@ -14,4 +14,9 @@ Do same for Access folder to put your access keys safely.
 
 Server will start running on port 3000 A sample ApI to test 
 
-localhost:3000/text?topics=Kinematics.
+localhost:3000/text?topics=Kinematics
+
+Video Link.
+
+
+https://drive.google.com/file/d/104fHk4gcxZjxryIhXkMMzRoq4-nGo2iJ/view?usp=sharing
